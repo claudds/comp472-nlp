@@ -1,0 +1,23 @@
+I'm OK.
+
+Unigram: i
+English: P(i) =-1.3386141407841143 ==> log prob of sentence so far: -1.8157353955037767
+French: P(i) =-1.311298845807637 ==> log prob of sentence so far: -1.7884201005272993
+Italian: P(i) =-1.1932190928178361 ==> log prob of sentence so far: -1.6703403475374985
+
+Unigram: m
+English: P(m) =-1.7872051071646766 ==> log prob of sentence so far: -3.6029405026684533
+French: P(m) =-1.6890469375324875 ==> log prob of sentence so far: -3.4774670380597867
+Italian: P(m) =-1.7666982433729386 ==> log prob of sentence so far: -3.4370385909104373
+
+Unigram: o
+English: P(o) =-1.3138722385574613 ==> log prob of sentence so far: -4.916812741225915
+French: P(o) =-1.4504373484797712 ==> log prob of sentence so far: -4.9279043865395575
+Italian: P(o) =-1.1854549806773838 ==> log prob of sentence so far: -4.622493571587821
+
+Unigram: k
+English: P(k) =-2.2488093220438192 ==> log prob of sentence so far: -7.165622063269733
+French: P(k) =-3.713761273693048 ==> log prob of sentence so far: -8.641665660232606
+Italian: P(k) =-3.1796029712183134 ==> log prob of sentence so far: -7.802096542806135
+
+According to the unigram model, the sentence is in English
