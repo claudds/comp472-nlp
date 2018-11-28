@@ -2,16 +2,12 @@ import string
 from collections import Counter
 from math import log10
 
-punct = str.maketrans('', '', string.punctuation)
-digits = str.maketrans('', '', string.digits)
 
 def readFileTrain(filename):
     with open(filename, 'r') as file:
         #read in the whole file
         data = file.read()
         data = ''.join(data.split())
-        data = data.translate(digits)
-        data = data.translate(punct)
     return data.lower()
 
 def readFileTest(filename):
@@ -53,27 +49,26 @@ def unigramTest(frModel, enModel, itModel, testString, filename):
     with open(filename, 'w') as file:
         file.write(testString + "\n")
 
-    testString = ''.join(testString.split())
+    #testString = ''.join(testString.split())
     testString = testString.lower()
-    testString = testString.translate(punct)
-    testString = testString.translate(digits)
+    print(testString)
 
     with open(filename, 'a') as file:
         for char in testString:
-            file.write("\nUnigram: " + char + "\n")
-            testDict["English"] += log10(enModel[char])
-            testDict["French"] += log10(frModel[char])
-            testDict["Italian"] += log10(itModel[char])
+            if char.isalpha():
+                file.write("\nUnigram: " + char + "\n")
+                testDict["English"] += log10(enModel[char])
+                testDict["French"] += log10(frModel[char])
+                testDict["Italian"] += log10(itModel[char])
 
-            file.write("English: P(" + char + ") =" + str(log10(enModel[char])) + " ==> log prob of sentence so far: " + str(testDict["English"]) + "\n")
-            file.write("French: P(" + char + ") =" + str(log10(frModel[char])) + " ==> log prob of sentence so far: " + str(testDict["French"])+ "\n")
-            file.write("Italian: P(" + char + ") =" + str(log10(itModel[char])) + " ==> log prob of sentence so far: " + str(testDict["Italian"])+ "\n")
+                file.write("English: P(" + char + ") =" + str(log10(enModel[char])) + " ==> log prob of sentence so far: " + str(testDict["English"]) + "\n")
+                file.write("French: P(" + char + ") =" + str(log10(frModel[char])) + " ==> log prob of sentence so far: " + str(testDict["French"])+ "\n")
+                file.write("Italian: P(" + char + ") =" + str(log10(itModel[char])) + " ==> log prob of sentence so far: " + str(testDict["Italian"])+ "\n")
 
     maxProb = max(testDict, key=testDict.get)
     with open(filename, 'a') as file:
         file.write("\nAccording to the unigram model, the sentence is in " + maxProb)
     return maxProb
-
 
 characters = list(readFileTrain("train/character-set.txt"))
 testSentences = readFileTest("test/test-sentences.txt")

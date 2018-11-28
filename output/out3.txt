@@ -1,23 +1,23 @@
 I'm OK.
 
 Unigram: i
-English: P(i) =-1.3386141407841143 ==> log prob of sentence so far: -1.8157353955037767
-French: P(i) =-1.311298845807637 ==> log prob of sentence so far: -1.7884201005272993
-Italian: P(i) =-1.1932190928178361 ==> log prob of sentence so far: -1.6703403475374985
+English: P(i) =-1.3595753603424277 ==> log prob of sentence so far: -1.83669661506209
+French: P(i) =-1.3355420807597242 ==> log prob of sentence so far: -1.8126633354793866
+Italian: P(i) =-1.2199714638861232 ==> log prob of sentence so far: -1.6970927186057856
 
 Unigram: m
-English: P(m) =-1.7872051071646766 ==> log prob of sentence so far: -3.6029405026684533
-French: P(m) =-1.6890469375324875 ==> log prob of sentence so far: -3.4774670380597867
-Italian: P(m) =-1.7666982433729386 ==> log prob of sentence so far: -3.4370385909104373
+English: P(m) =-1.80816632672299 ==> log prob of sentence so far: -3.64486294178508
+French: P(m) =-1.7132901724845748 ==> log prob of sentence so far: -3.5259535079639615
+Italian: P(m) =-1.7934506144412259 ==> log prob of sentence so far: -3.4905433330470115
 
 Unigram: o
-English: P(o) =-1.3138722385574613 ==> log prob of sentence so far: -4.916812741225915
-French: P(o) =-1.4504373484797712 ==> log prob of sentence so far: -4.9279043865395575
-Italian: P(o) =-1.1854549806773838 ==> log prob of sentence so far: -4.622493571587821
+English: P(o) =-1.3348334581157746 ==> log prob of sentence so far: -4.979696399900854
+French: P(o) =-1.4746805834318586 ==> log prob of sentence so far: -5.0006340913958205
+Italian: P(o) =-1.212207351745671 ==> log prob of sentence so far: -4.702750684792683
 
 Unigram: k
-English: P(k) =-2.2488093220438192 ==> log prob of sentence so far: -7.165622063269733
-French: P(k) =-3.713761273693048 ==> log prob of sentence so far: -8.641665660232606
-Italian: P(k) =-3.1796029712183134 ==> log prob of sentence so far: -7.802096542806135
+English: P(k) =-2.2697705416021328 ==> log prob of sentence so far: -7.2494669415029875
+French: P(k) =-3.7380045086451354 ==> log prob of sentence so far: -8.738638600040955
+Italian: P(k) =-3.2063553422866007 ==> log prob of sentence so far: -7.909106027079284
 
 According to the unigram model, the sentence is in English
