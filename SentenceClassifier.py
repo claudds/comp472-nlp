@@ -27,7 +27,7 @@ def train(text, characters, outputFile, smoothing):
         numberOfChars += (smoothing*numberOfChars)
 
     for letter in probabilities:
-        probabilities[letter] = letterCounts[letter]/numberOfChars
+        probabilities[letter] = (letterCounts[letter]+smoothing)/numberOfChars
 
     with open(outputFile, 'w') as file:
         for letter in probabilities:
