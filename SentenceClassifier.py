@@ -85,7 +85,7 @@ trainingText = textF1 + textF2
 frModel = train(trainingText, characters, "models/unigramFR.txt", 0.5)
 
 
-## Italian Unigram Training
+## Italian Training
 textI1 = readFileTrain("train/it-le-avventure-d-alice.txt")
 textI2 = readFileTrain("train/it-la-divina-commedia.txt")
 trainingText = textI1 + textI2
