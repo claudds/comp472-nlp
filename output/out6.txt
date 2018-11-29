@@ -3,56 +3,56 @@ L'oiseau vole.
 Unigram: l
 English: P(l) =-1.544820518920908 ==> log prob of sentence so far: -2.0219417736405707
 French: P(l) =-1.4685496508132652 ==> log prob of sentence so far: -1.9456709055329275
-Italian: P(l) =-1.3925820800331548 ==> log prob of sentence so far: -1.8697033347528171
+Italian: P(l) =-1.4349521825813745 ==> log prob of sentence so far: -1.9120734373010368
 
 Unigram: o
 English: P(o) =-1.3348334581157746 ==> log prob of sentence so far: -3.3567752317563455
 French: P(o) =-1.4746805834318586 ==> log prob of sentence so far: -3.420351488964786
-Italian: P(o) =-1.212207351745671 ==> log prob of sentence so far: -3.081910686498488
+Italian: P(o) =-1.221037610737267 ==> log prob of sentence so far: -3.1331110480383035
 
 Unigram: i
 English: P(i) =-1.3595753603424277 ==> log prob of sentence so far: -4.716350592098773
 French: P(i) =-1.3355420807597242 ==> log prob of sentence so far: -4.755893569724511
-Italian: P(i) =-1.2199714638861232 ==> log prob of sentence so far: -4.301882150384611
+Italian: P(i) =-1.196268086723488 ==> log prob of sentence so far: -4.329379134761791
 
 Unigram: s
 English: P(s) =-1.3681909588410976 ==> log prob of sentence so far: -6.08454155093987
 French: P(s) =-1.2647827100084779 ==> log prob of sentence so far: -6.020676279732989
-Italian: P(s) =-1.4664681897174632 ==> log prob of sentence so far: -5.768350340102074
+Italian: P(s) =-1.4525790711662843 ==> log prob of sentence so far: -5.781958205928076
 
 Unigram: e
 English: P(e) =-1.1071196450517211 ==> log prob of sentence so far: -7.191661195991592
 French: P(e) =-0.9672990077514174 ==> log prob of sentence so far: -6.9879752874844066
-Italian: P(e) =-1.1441050268797757 ==> log prob of sentence so far: -6.91245536698185
+Italian: P(e) =-1.1242214342393118 ==> log prob of sentence so far: -6.906179640167387
 
 Unigram: a
 English: P(a) =-1.2838380336083046 ==> log prob of sentence so far: -8.475499229599896
 French: P(a) =-1.2766881912104673 ==> log prob of sentence so far: -8.264663478694874
-Italian: P(a) =-1.1359760990233874 ==> log prob of sentence so far: -8.048431466005237
+Italian: P(a) =-1.1679107345110917 ==> log prob of sentence so far: -8.074090374678478
 
 Unigram: u
 English: P(u) =-1.74954284344601 ==> log prob of sentence so far: -10.225042073045906
 French: P(u) =-1.4064714579842938 ==> log prob of sentence so far: -9.671134936679168
-Italian: P(u) =-1.67293173446899 ==> log prob of sentence so far: -9.721363200474228
+Italian: P(u) =-1.655835233334462 ==> log prob of sentence so far: -9.729925608012941
 
 Unigram: v
 English: P(v) =-2.2406909943802686 ==> log prob of sentence so far: -12.465733067426175
 French: P(v) =-2.0281947160498874 ==> log prob of sentence so far: -11.699329652729055
-Italian: P(v) =-1.8835904376893375 ==> log prob of sentence so far: -11.604953638163565
+Italian: P(v) =-1.8944510284288014 ==> log prob of sentence so far: -11.624376636441742
 
 Unigram: o
 English: P(o) =-1.3348334581157746 ==> log prob of sentence so far: -13.80056652554195
 French: P(o) =-1.4746805834318586 ==> log prob of sentence so far: -13.174010236160914
-Italian: P(o) =-1.212207351745671 ==> log prob of sentence so far: -12.817160989909237
+Italian: P(o) =-1.221037610737267 ==> log prob of sentence so far: -12.845414247179008
 
 Unigram: l
 English: P(l) =-1.544820518920908 ==> log prob of sentence so far: -15.345387044462857
 French: P(l) =-1.4685496508132652 ==> log prob of sentence so far: -14.64255988697418
-Italian: P(l) =-1.3925820800331548 ==> log prob of sentence so far: -14.209743069942391
+Italian: P(l) =-1.4349521825813745 ==> log prob of sentence so far: -14.280366429760383
 
 Unigram: e
 English: P(e) =-1.1071196450517211 ==> log prob of sentence so far: -16.45250668951458
 French: P(e) =-0.9672990077514174 ==> log prob of sentence so far: -15.609858894725598
-Italian: P(e) =-1.1441050268797757 ==> log prob of sentence so far: -15.353848096822167
+Italian: P(e) =-1.1242214342393118 ==> log prob of sentence so far: -15.404587863999694
 
 According to the unigram model, the sentence is in Italian

@@ -18,7 +18,7 @@ def readFileTest(filename):
     return testSentences
 
 
-def unigramTrain(text, characters, outputFile, smoothing):
+def train(text, characters, outputFile, smoothing):
     probabilities = {x: '' for x in characters}
     letterCounts = Counter(text)
     numberOfChars = len(text)
@@ -48,8 +48,6 @@ def unigramTest(frModel, enModel, itModel, testString, filename):
 
     with open(filename, 'w') as file:
         file.write(testString + "\n")
-
-    #testString = ''.join(testString.split())
     testString = testString.lower()
     print(testString)
 
@@ -73,29 +71,29 @@ def unigramTest(frModel, enModel, itModel, testString, filename):
 characters = list(readFileTrain("train/character-set.txt"))
 testSentences = readFileTest("test/test-sentences.txt")
 
-## English Unigram training
+## English training
 textE1 = readFileTrain("train/en-moby-dick.txt")
 textE2 = readFileTrain("train/en-the-little-prince.txt")
 trainingText = textE1 + textE2
-enUnigramModel = unigramTrain(trainingText, characters, "models/unigramEN.txt", 0.5)
+enModel = train(trainingText, characters, "models/unigramEN.txt", 0.5)
 
 
-## French Unigram Training
+## French Training
 textF1 = readFileTrain("train/fr-le-petit-prince.txt")
 textF2 = readFileTrain("train/fr-vingt-mille-lieues-sous-les-mers.txt")
 trainingText = textF1 + textF2
-frUnigramModel = unigramTrain(trainingText, characters, "models/unigramFR.txt", 0.5)
+frModel = train(trainingText, characters, "models/unigramFR.txt", 0.5)
 
 
 ## Italian Unigram Training
-textI1 = readFileTrain("train/it-il-trono-di-spade.txt")
+textI1 = readFileTrain("train/it-le-avventure-d-alice.txt")
 textI2 = readFileTrain("train/it-la-divina-commedia.txt")
 trainingText = textI1 + textI2
-itUnigramModel = unigramTrain(trainingText, characters, "models/unigramOT.txt", 0.5)
+itModel = train(trainingText, characters, "models/unigramOT.txt", 0.5)
 
 counter = 1
 for sentence in testSentences:
     filename = "output/out" + str(counter) + ".txt" 
-    unigramResult = unigramTest(frUnigramModel, enUnigramModel, itUnigramModel, sentence, filename)
+    unigramResult = unigramTest(frModel, enModel, itModel, sentence, filename)
     print("According to the unigram model, the sentence is in " + unigramResult)
     counter += 1
