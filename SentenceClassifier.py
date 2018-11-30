@@ -39,15 +39,30 @@ def unigramTrain(text, characters, outputFile, smoothing):
     return probabilities
 
 def bigramTrain(text, characters, outputFile, smoothing):
-    pairs = []
-    for i in range(0, len(text)-1):
-        pairs.append(text[i] + text[i+1])
-    pairs = set(pairs)
-    pairs = {p: '' for p in pairs}
+    pairs = {}
+    letters = {}
+    for c1 in characters:
+        letters[c1]=0
+        pairs[c1]={}
+        for c2 in characters:
+            pairs[c1][c2]=0
     
-    for p in pairs:
-        count = text.count(p)
-    return ''
+    for i in range(0, len(text)-1):
+        pairs[text[i]][text[i+1]]+=1
+        letters[text[i]]+=1
+    probabilities = {}
+
+    for p1 in pairs.keys():
+        probabilities[p1]={}
+        for p2 in pairs[p1].keys():
+            probabilities[p1][p2] = (pairs[p1][p2]+smoothing)/(smoothing*letters[p1]+letters[p1])
+    
+    with open(outputFile, 'w') as file:
+        for p1 in probabilities.keys():
+            for p2 in probabilities[p1].keys():
+                file.write("P(" + p2 + " | " + p1 + " ) = " + str(probabilities[p1][p2]) + '\n')
+    
+    return probabilities
 
 ## Probability of each language should be 2/6 since there's 2 texts for each
 def unigramTest(frModel, enModel, itModel, testString, filename):
@@ -98,24 +113,25 @@ testSentences = readFileTest("test/test-sentences.txt")
 textE1 = readFileTrain("train/en-moby-dick.txt")
 textE2 = readFileTrain("train/en-the-little-prince.txt")
 trainingText = str(textE1 + textE2)
-enUnigramModel = unigramTrain(trainingText, characters, "models/unigramEN.txt", 0.5)
-enBigramModel = bigramTrain(trainingText, characters, "", 0)
+enBigramModel = bigramTrain(trainingText, characters, "models/bigramEN.txt", 0.5)
+# enUnigramModel = unigramTrain(trainingText, characters, "models/unigramEN.txt", 0.5)
+# enBigramModel = bigramTrain(trainingText, characters, "", 0)
 
 
-## French Training
-textF1 = readFileTrain("train/fr-le-petit-prince.txt")
-textF2 = readFileTrain("train/fr-vingt-mille-lieues-sous-les-mers.txt")
-trainingText = textF1 + textF2
-frUnigramModel = unigramTrain(trainingText, characters, "models/unigramFR.txt", 0.5)
-frBigramModel = bigramTrain(trainingText, characters, "", 0)
+# ## French Training
+# textF1 = readFileTrain("train/fr-le-petit-prince.txt")
+# textF2 = readFileTrain("train/fr-vingt-mille-lieues-sous-les-mers.txt")
+# trainingText = textF1 + textF2
+# frUnigramModel = unigramTrain(trainingText, characters, "models/unigramFR.txt", 0.5)
+# frBigramModel = bigramTrain(trainingText, characters, "", 0)
 
 
-## Italian Training
-textI1 = readFileTrain("train/it-il-trono-di-spade.txt")
-textI2 = readFileTrain("train/it-la-divina-commedia.txt")
-trainingText = textI1 + textI2
-itUnigramModel = unigramTrain(trainingText, characters, "models/unigramOT.txt", 0.5)
-frBigramModel = bigramTrain(trainingText, characters, "", 0)
+# ## Italian Training
+# textI1 = readFileTrain("train/it-il-trono-di-spade.txt")
+# textI2 = readFileTrain("train/it-la-divina-commedia.txt")
+# trainingText = textI1 + textI2
+# itUnigramModel = unigramTrain(trainingText, characters, "models/unigramOT.txt", 0.5)
+# frBigramModel = bigramTrain(trainingText, characters, "", 0)
 
 # counter = 1
 # for sentence in testSentences:
