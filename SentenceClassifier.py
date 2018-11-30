@@ -39,9 +39,7 @@ def unigramTrain(text, characters, outputFile, smoothing):
     return probabilities
 
 def bigramTrain(text, characters, outputFile, smoothing):
-    probabilities = [x for x in characters]
     pairs = []
-    numberOfChars = len(text)
     for i in range(0, len(text)-1):
         pairs.append(text[i] + text[i+1])
     pairs = set(pairs)
@@ -49,7 +47,6 @@ def bigramTrain(text, characters, outputFile, smoothing):
     
     for p in pairs:
         count = text.count(p)
-        print(count) 
     return ''
 
 ## Probability of each language should be 2/6 since there's 2 texts for each
@@ -114,7 +111,7 @@ frBigramModel = bigramTrain(trainingText, characters, "", 0)
 
 
 ## Italian Training
-textI1 = readFileTrain("train/it-le-avventure-d-alice.txt")
+textI1 = readFileTrain("train/it-il-trono-di-spade.txt")
 textI2 = readFileTrain("train/it-la-divina-commedia.txt")
 trainingText = textI1 + textI2
 itUnigramModel = unigramTrain(trainingText, characters, "models/unigramOT.txt", 0.5)
