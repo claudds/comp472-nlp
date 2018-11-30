@@ -2,12 +2,15 @@ import string
 from collections import Counter
 from math import log10
 
-
+punct = str.maketrans('', '', string.punctuation)
+digits = str.maketrans('', '', string.digits)
 def readFileTrain(filename):
     with open(filename, 'r') as file:
         #read in the whole file
         data = file.read()
         data = ''.join(data.split())
+        data = data.translate(punct)
+        data = data.translate(digits)
     return data.lower()
 
 def readFileTest(filename):
@@ -18,7 +21,7 @@ def readFileTest(filename):
     return testSentences
 
 
-def train(text, characters, outputFile, smoothing):
+def unigramTrain(text, characters, outputFile, smoothing):
     probabilities = {x: '' for x in characters}
     letterCounts = Counter(text)
     numberOfChars = len(text)
@@ -35,6 +38,20 @@ def train(text, characters, outputFile, smoothing):
     
     return probabilities
 
+def bigramTrain(text, characters, outputFile, smoothing):
+    probabilities = [x for x in characters]
+    pairs = []
+    numberOfChars = len(text)
+    for i in range(0, len(text)-1):
+        pairs.append(text[i] + text[i+1])
+    pairs = set(pairs)
+    pairs = {p: '' for p in pairs}
+    
+    for p in pairs:
+        count = text.count(p)
+        print(count) 
+    return ''
+
 ## Probability of each language should be 2/6 since there's 2 texts for each
 def unigramTest(frModel, enModel, itModel, testString, filename):
     probEn = (2/6)
@@ -50,6 +67,9 @@ def unigramTest(frModel, enModel, itModel, testString, filename):
         file.write(testString + "\n")
     testString = testString.lower()
     print(testString)
+
+    testString = testString.translate(punct)
+    testString = testString.translate(digits)
 
     with open(filename, 'a') as file:
         for char in testString:
@@ -68,32 +88,41 @@ def unigramTest(frModel, enModel, itModel, testString, filename):
         file.write("\nAccording to the unigram model, the sentence is in " + maxProb)
     return maxProb
 
+def bigramTest(frModel, enModel, itModel, testString, filename):
+    probEn = (2/6)
+    probFr = (2/6)
+    probIt = (2/6)
+    return ""
+
 characters = list(readFileTrain("train/character-set.txt"))
 testSentences = readFileTest("test/test-sentences.txt")
 
 ## English training
 textE1 = readFileTrain("train/en-moby-dick.txt")
 textE2 = readFileTrain("train/en-the-little-prince.txt")
-trainingText = textE1 + textE2
-enModel = train(trainingText, characters, "models/unigramEN.txt", 0.5)
+trainingText = str(textE1 + textE2)
+enUnigramModel = unigramTrain(trainingText, characters, "models/unigramEN.txt", 0.5)
+enBigramModel = bigramTrain(trainingText, characters, "", 0)
 
 
 ## French Training
 textF1 = readFileTrain("train/fr-le-petit-prince.txt")
 textF2 = readFileTrain("train/fr-vingt-mille-lieues-sous-les-mers.txt")
 trainingText = textF1 + textF2
-frModel = train(trainingText, characters, "models/unigramFR.txt", 0.5)
+frUnigramModel = unigramTrain(trainingText, characters, "models/unigramFR.txt", 0.5)
+frBigramModel = bigramTrain(trainingText, characters, "", 0)
 
 
 ## Italian Training
 textI1 = readFileTrain("train/it-le-avventure-d-alice.txt")
 textI2 = readFileTrain("train/it-la-divina-commedia.txt")
 trainingText = textI1 + textI2
-itModel = train(trainingText, characters, "models/unigramOT.txt", 0.5)
+itUnigramModel = unigramTrain(trainingText, characters, "models/unigramOT.txt", 0.5)
+frBigramModel = bigramTrain(trainingText, characters, "", 0)
 
-counter = 1
-for sentence in testSentences:
-    filename = "output/out" + str(counter) + ".txt" 
-    unigramResult = unigramTest(frModel, enModel, itModel, sentence, filename)
-    print("According to the unigram model, the sentence is in " + unigramResult)
-    counter += 1
+# counter = 1
+# for sentence in testSentences:
+#     filename = "output/out" + str(counter) + ".txt" 
+#     unigramResult = unigramTest(frUnigramModel, enUnigramModel, itUnigramModel, sentence, filename)
+#     print("According to the unigram model, the sentence is in " + unigramResult)
+#     counter += 1
