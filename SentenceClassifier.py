@@ -18,7 +18,7 @@ def readFileTest(filename):
 
 
 def unigramTrain(text, characters, outputFile, smoothing):
-    text = text.replace(' ','')
+    text = re.sub(' ','',text)
     probabilities = {x: '' for x in characters}
     letterCounts = Counter(text)
     numberOfChars = len(text)
@@ -59,7 +59,7 @@ def bigramTrain(text, characters, outputFile, smoothing):
     with open(outputFile, 'w') as file:
         for p1 in probabilities.keys():
             for p2 in probabilities[p1].keys():
-                file.write("P(" + p2 + " | " + p1 + " ) = " + str(probabilities[p1][p2]) + '\n')
+                file.write("P(" + p2 + "|" + p1 + ") = " + str(probabilities[p1][p2]) + '\n')
     
     return probabilities
 
@@ -75,7 +75,7 @@ def unigramTest(frModel, enModel, itModel, testString, filename):
     testDict["Italian"] = log10(probIt)
 
     with open(filename, 'w') as file:
-        file.write(testString + "\n")
+        file.write(testString + "\n\nUNIGRAM MODEL:\n")
     testString = testString.lower()
     print(testString)
 
@@ -112,7 +112,7 @@ def bigramTest(frModel, enModel, itModel, testString, filename):
     testString = re.sub(r'[^a-z ]','',testString)
 
     with open(filename, 'a') as file:
-        file.write("\n---------------- \n")
+        file.write("\n---------------- \nBIGRAM MODEL:\n")
         for i in range(0, len(testString)-1):
             if(testString[i]==' ' or testString[i+1]==' '):
                 continue
@@ -134,7 +134,7 @@ def bigramTest(frModel, enModel, itModel, testString, filename):
         file.write("\nAccording to the unigram model, the sentence is in " + maxProb)
     return maxProb
 
-characters = list(readFileTrain("train/character-set.txt"))
+characters = list(re.sub(' ','',readFileTrain("train/character-set.txt")))
 testSentences = readFileTest("test/test-sentences.txt")
 
 ## English training

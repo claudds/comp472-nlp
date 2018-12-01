@@ -1,5 +1,7 @@
 La verita e l'unica cosa che conta.
 
+UNIGRAM MODEL:
+
 Unigram: l
 English: P(l) =-1.5206190517187361 ==> log prob of sentence so far: -1.9977403064383985
 French: P(l) =-1.457766955762014 ==> log prob of sentence so far: -1.9348882104816765
@@ -137,105 +139,106 @@ Italian: P(a) =-1.103795676281565 ==> log prob of sentence so far: -36.831419237
 
 According to the unigram model, the sentence is in Italian
 ---------------- 
+BIGRAM MODEL:
 
 Bigram: la
-English: P(a|l) =-1.007042393696986 ==> log prob of sentence so far: -1.4841636484166483
-French: P(a|l) =-0.6811425499069984 ==> log prob of sentence so far: -1.158263804626661
-Italian: P(a|l) =-0.629736412985958 ==> log prob of sentence so far: -1.1068576677056203
+English: P(a|l) =-1.0070364281544153 ==> log prob of sentence so far: -1.4841576828740777
+French: P(a|l) =-0.6811357896706765 ==> log prob of sentence so far: -1.1582570443903388
+Italian: P(a|l) =-0.6297342560352193 ==> log prob of sentence so far: -1.1068555107548816
 
 Bigram: ve
-English: P(e|v) =-0.1696655986168 ==> log prob of sentence so far: -1.6538292470334484
-French: P(e|v) =-0.47738236669620576 ==> log prob of sentence so far: -1.6356461713228667
-Italian: P(e|v) =-0.5042228127133564 ==> log prob of sentence so far: -1.611080480418977
+English: P(e|v) =-0.16964006164669865 ==> log prob of sentence so far: -1.6537977445207763
+French: P(e|v) =-0.4773606133599342 ==> log prob of sentence so far: -1.635617657750273
+Italian: P(e|v) =-0.50421716008215 ==> log prob of sentence so far: -1.6110726708370318
 
 Bigram: er
-English: P(r|e) =-0.725204057813643 ==> log prob of sentence so far: -2.3790333048470913
-French: P(r|e) =-0.92549230594226 ==> log prob of sentence so far: -2.5611384772651267
-Italian: P(r|e) =-0.5782182159664685 ==> log prob of sentence so far: -2.1892986963854453
+English: P(r|e) =-0.7252013121815049 ==> log prob of sentence so far: -2.3789990567022814
+French: P(r|e) =-0.9254894341275853 ==> log prob of sentence so far: -2.5611070918778585
+Italian: P(r|e) =-0.5782165024521734 ==> log prob of sentence so far: -2.1892891732892052
 
 Bigram: ri
-English: P(i|r) =-0.9981049315590154 ==> log prob of sentence so far: -3.3771382364061067
-French: P(i|r) =-1.028662999493692 ==> log prob of sentence so far: -3.5898014767588187
-Italian: P(i|r) =-0.8360740255476846 ==> log prob of sentence so far: -3.02537272193313
+English: P(i|r) =-0.9980997282152955 ==> log prob of sentence so far: -3.377098784917577
+French: P(i|r) =-1.028657148873234 ==> log prob of sentence so far: -3.5897642407510926
+Italian: P(i|r) =-0.8360722773807799 ==> log prob of sentence so far: -3.025361450669985
 
 Bigram: it
-English: P(t|i) =-0.9143377468409991 ==> log prob of sentence so far: -4.291475983247106
-French: P(t|i) =-0.7339881766118627 ==> log prob of sentence so far: -4.323789653370682
-Italian: P(t|i) =-1.288968640479986 ==> log prob of sentence so far: -4.314341362413116
+English: P(t|i) =-0.9143342563030097 ==> log prob of sentence so far: -4.2914330412205866
+French: P(t|i) =-0.7339834286933326 ==> log prob of sentence so far: -4.323747669444425
+Italian: P(t|i) =-1.288966736318523 ==> log prob of sentence so far: -4.314328186988508
 
 Bigram: ta
-English: P(a|t) =-1.2660423699072174 ==> log prob of sentence so far: -5.5575183531543235
-French: P(a|t) =-0.815065721977229 ==> log prob of sentence so far: -5.1388553753479105
-Italian: P(a|t) =-0.7157889103730317 ==> log prob of sentence so far: -5.030130272786148
+English: P(a|t) =-1.2660390488132085 ==> log prob of sentence so far: -5.557472090033795
+French: P(a|t) =-0.815057928656602 ==> log prob of sentence so far: -5.138805598101027
+Italian: P(a|t) =-0.7157869058243983 ==> log prob of sentence so far: -5.030115092812906
 
 Bigram: lu
-English: P(u|l) =-1.6800081308026094 ==> log prob of sentence so far: -7.237526483956933
-French: P(u|l) =-1.0993199323400515 ==> log prob of sentence so far: -6.238175307687962
-Italian: P(u|l) =-1.3739645726399947 ==> log prob of sentence so far: -6.404094845426143
+English: P(u|l) =-1.6800021652600388 ==> log prob of sentence so far: -7.237474255293834
+French: P(u|l) =-1.0993131721037297 ==> log prob of sentence so far: -6.238118770204757
+Italian: P(u|l) =-1.373962415689256 ==> log prob of sentence so far: -6.404077508502162
 
 Bigram: un
-English: P(n|u) =-0.8983772116832053 ==> log prob of sentence so far: -8.135903695640138
-French: P(n|u) =-1.012191823441257 ==> log prob of sentence so far: -7.250367131129219
-Italian: P(n|u) =-0.7099542906809853 ==> log prob of sentence so far: -7.114049136107129
+English: P(n|u) =-0.8983687045288793 ==> log prob of sentence so far: -8.135842959822714
+French: P(n|u) =-1.0121861923579838 ==> log prob of sentence so far: -7.2503049625627405
+Italian: P(n|u) =-0.7099505912991305 ==> log prob of sentence so far: -7.114028099801293
 
 Bigram: ni
-English: P(i|n) =-1.4096811643735392 ==> log prob of sentence so far: -9.545584860013678
-French: P(i|n) =-1.4595897470412986 ==> log prob of sentence so far: -8.709956878170518
-Italian: P(i|n) =-1.1572610898630011 ==> log prob of sentence so far: -8.27131022597013
+English: P(i|n) =-1.4096767963782673 ==> log prob of sentence so far: -9.545519756200981
+French: P(i|n) =-1.4595845296953924 ==> log prob of sentence so far: -8.709889492258133
+Italian: P(i|n) =-1.157258946833945 ==> log prob of sentence so far: -8.271287046635237
 
 Bigram: ic
-English: P(c|i) =-1.3539786110633576 ==> log prob of sentence so far: -10.899563471077036
-French: P(c|i) =-1.7096452065553613 ==> log prob of sentence so far: -10.419602084725879
-Italian: P(c|i) =-1.2931370658284893 ==> log prob of sentence so far: -9.564447291798619
+English: P(c|i) =-1.3539751205253683 ==> log prob of sentence so far: -10.899494876726349
+French: P(c|i) =-1.709640458636831 ==> log prob of sentence so far: -10.419529950894965
+Italian: P(c|i) =-1.2931351616670266 ==> log prob of sentence so far: -9.564422208302263
 
 Bigram: ca
-English: P(a|c) =-0.8798421559881819 ==> log prob of sentence so far: -11.779405627065218
-French: P(a|c) =-0.9239537453952148 ==> log prob of sentence so far: -11.343555830121094
-Italian: P(a|c) =-0.9238430448787597 ==> log prob of sentence so far: -10.488290336677379
+English: P(a|c) =-0.8798318754905569 ==> log prob of sentence so far: -11.779326752216907
+French: P(a|c) =-0.923942668291114 ==> log prob of sentence so far: -11.343472619186079
+Italian: P(a|c) =-0.9238403067248656 ==> log prob of sentence so far: -10.48826251502713
 
 Bigram: co
-English: P(o|c) =-0.7795000720354116 ==> log prob of sentence so far: -12.55890569910063
-French: P(o|c) =-0.6542938627595734 ==> log prob of sentence so far: -11.997849692880667
-Italian: P(o|c) =-0.5721739905120388 ==> log prob of sentence so far: -11.060464327189417
+English: P(o|c) =-0.7794897915377865 ==> log prob of sentence so far: -12.558816543754693
+French: P(o|c) =-0.6542827856554725 ==> log prob of sentence so far: -11.997755404841552
+Italian: P(o|c) =-0.5721712523581447 ==> log prob of sentence so far: -11.060433767385273
 
 Bigram: os
-English: P(s|o) =-1.4416642633147838 ==> log prob of sentence so far: -14.000569962415414
-French: P(s|o) =-1.5488726395042838 ==> log prob of sentence so far: -13.54672233238495
-Italian: P(s|o) =-0.9962037568088801 ==> log prob of sentence so far: -12.056668083998296
+English: P(s|o) =-1.441660694118238 ==> log prob of sentence so far: -14.00047723787293
+French: P(s|o) =-1.5488665912136905 ==> log prob of sentence so far: -13.546621996055242
+Italian: P(s|o) =-0.996201618338416 ==> log prob of sentence so far: -12.05663538572369
 
 Bigram: sa
-English: P(a|s) =-1.2081516912613641 ==> log prob of sentence so far: -15.208721653676777
-French: P(a|s) =-0.9306701726881653 ==> log prob of sentence so far: -14.477392505073116
-Italian: P(a|s) =-1.0074798086779786 ==> log prob of sentence so far: -13.064147892676274
+English: P(a|s) =-1.2081459827565708 ==> log prob of sentence so far: -15.208623220629502
+French: P(a|s) =-0.930662032897109 ==> log prob of sentence so far: -14.47728402895235
+Italian: P(a|s) =-1.0074775863873378 ==> log prob of sentence so far: -13.064112972111028
 
 Bigram: ch
-English: P(h|c) =-0.7822311025019897 ==> log prob of sentence so far: -15.990952756178768
-French: P(h|c) =-0.9006047945282735 ==> log prob of sentence so far: -15.37799729960139
-Italian: P(h|c) =-0.651680488735656 ==> log prob of sentence so far: -13.71582838141193
+English: P(h|c) =-0.7822208220043646 ==> log prob of sentence so far: -15.990844042633865
+French: P(h|c) =-0.9005937174241726 ==> log prob of sentence so far: -15.377877746376523
+Italian: P(h|c) =-0.6516777505817619 ==> log prob of sentence so far: -13.71579072269279
 
 Bigram: he
-English: P(e|h) =-0.3306099849376082 ==> log prob of sentence so far: -16.321562741116377
-French: P(e|h) =-0.44355704176644856 ==> log prob of sentence so far: -15.821554341367838
-Italian: P(e|h) =-0.24785712250420575 ==> log prob of sentence so far: -13.963685503916135
+English: P(e|h) =-0.3306061065637962 ==> log prob of sentence so far: -16.321450149197663
+French: P(e|h) =-0.4435148956669538 ==> log prob of sentence so far: -15.821392642043477
+Italian: P(e|h) =-0.24784728671211384 ==> log prob of sentence so far: -13.963638009404903
 
 Bigram: co
-English: P(o|c) =-0.7795000720354116 ==> log prob of sentence so far: -17.10106281315179
-French: P(o|c) =-0.6542938627595734 ==> log prob of sentence so far: -16.475848204127413
-Italian: P(o|c) =-0.5721739905120388 ==> log prob of sentence so far: -14.535859494428173
+English: P(o|c) =-0.7794897915377865 ==> log prob of sentence so far: -17.10093994073545
+French: P(o|c) =-0.6542827856554725 ==> log prob of sentence so far: -16.47567542769895
+Italian: P(o|c) =-0.5721712523581447 ==> log prob of sentence so far: -14.535809261763047
 
 Bigram: on
-English: P(n|o) =-0.8211774058846084 ==> log prob of sentence so far: -17.922240219036397
-French: P(n|o) =-0.516325761955009 ==> log prob of sentence so far: -16.992173966082422
-Italian: P(n|o) =-0.607697057983099 ==> log prob of sentence so far: -15.143556552411273
+English: P(n|o) =-0.8211738366880625 ==> log prob of sentence so far: -17.92211377742351
+French: P(n|o) =-0.5163197136644156 ==> log prob of sentence so far: -16.991995141363365
+Italian: P(n|o) =-0.607694919512635 ==> log prob of sentence so far: -15.143504181275683
 
 Bigram: nt
-English: P(t|n) =-0.9181421712994481 ==> log prob of sentence so far: -18.840382390335844
-French: P(t|n) =-0.5538209450379603 ==> log prob of sentence so far: -17.54599491112038
-Italian: P(t|n) =-0.7568104353520099 ==> log prob of sentence so far: -15.900366987763283
+English: P(t|n) =-0.9181378033041762 ==> log prob of sentence so far: -18.84025158072769
+French: P(t|n) =-0.553815727692054 ==> log prob of sentence so far: -17.54581086905542
+Italian: P(t|n) =-0.7568082923229535 ==> log prob of sentence so far: -15.900312473598635
 
 Bigram: ta
-English: P(a|t) =-1.2660423699072174 ==> log prob of sentence so far: -20.106424760243062
-French: P(a|t) =-0.815065721977229 ==> log prob of sentence so far: -18.361060633097612
-Italian: P(a|t) =-0.7157889103730317 ==> log prob of sentence so far: -16.616155898136313
+English: P(a|t) =-1.2660390488132085 ==> log prob of sentence so far: -20.106290629540897
+French: P(a|t) =-0.815057928656602 ==> log prob of sentence so far: -18.360868797712023
+Italian: P(a|t) =-0.7157869058243983 ==> log prob of sentence so far: -16.616099379423034
 
 According to the unigram model, the sentence is in Italian

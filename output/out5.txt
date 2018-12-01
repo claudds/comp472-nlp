@@ -1,5 +1,7 @@
 I hate AI.
 
+UNIGRAM MODEL:
+
 Unigram: i
 English: P(i) =-1.3507570809604024 ==> log prob of sentence so far: -1.8278783356800647
 French: P(i) =-1.3081619549226269 ==> log prob of sentence so far: -1.7852832096422893
@@ -37,25 +39,26 @@ Italian: P(i) =-1.1895912530849566 ==> log prob of sentence so far: -9.669459391
 
 According to the unigram model, the sentence is in English
 ---------------- 
+BIGRAM MODEL:
 
 Bigram: ha
-English: P(a|h) =-0.6945863893119055 ==> log prob of sentence so far: -1.171707644031568
-French: P(a|h) =-0.5083053598435437 ==> log prob of sentence so far: -0.9854266145632062
-Italian: P(a|h) =-0.9571834777204891 ==> log prob of sentence so far: -1.4343047324401514
+English: P(a|h) =-0.6945825109380934 ==> log prob of sentence so far: -1.1717037656577558
+French: P(a|h) =-0.5082632137440489 ==> log prob of sentence so far: -0.9853844684637114
+Italian: P(a|h) =-0.9571736419283972 ==> log prob of sentence so far: -1.4342948966480595
 
 Bigram: at
-English: P(t|a) =-0.8417416462392538 ==> log prob of sentence so far: -2.0134492902708216
-French: P(t|a) =-1.2476110289713962 ==> log prob of sentence so far: -2.2330376435346024
-Italian: P(t|a) =-0.9344485044789402 ==> log prob of sentence so far: -2.368753236919092
+English: P(t|a) =-0.8417385886994543 ==> log prob of sentence so far: -2.01344235435721
+French: P(t|a) =-1.2476065272275634 ==> log prob of sentence so far: -2.232990995691275
+Italian: P(t|a) =-0.9344469035260906 ==> log prob of sentence so far: -2.36874180017415
 
 Bigram: te
-English: P(e|t) =-0.9676862880667157 ==> log prob of sentence so far: -2.9811355783375375
-French: P(e|t) =-0.5179991112754109 ==> log prob of sentence so far: -2.751036754810013
-Italian: P(e|t) =-0.7327218271028445 ==> log prob of sentence so far: -3.1014750640219364
+English: P(e|t) =-0.9676829669727067 ==> log prob of sentence so far: -2.981125321329917
+French: P(e|t) =-0.517991317954784 ==> log prob of sentence so far: -2.750982313646059
+Italian: P(e|t) =-0.732719822554211 ==> log prob of sentence so far: -3.101461622728361
 
 Bigram: ai
-English: P(i|a) =-1.3202242601008645 ==> log prob of sentence so far: -4.301359838438402
-French: P(i|a) =-0.6187493553673675 ==> log prob of sentence so far: -3.3697861101773805
-Italian: P(i|a) =-1.558634933081027 ==> log prob of sentence so far: -4.660109997102963
+English: P(i|a) =-1.3202212025610647 ==> log prob of sentence so far: -4.301346523890982
+French: P(i|a) =-0.6187448536235347 ==> log prob of sentence so far: -3.369727167269594
+Italian: P(i|a) =-1.5586333321281773 ==> log prob of sentence so far: -4.660094954856538
 
 According to the unigram model, the sentence is in French

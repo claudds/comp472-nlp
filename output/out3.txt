@@ -1,5 +1,7 @@
 I'm OK.
 
+UNIGRAM MODEL:
+
 Unigram: i
 English: P(i) =-1.3507570809604024 ==> log prob of sentence so far: -1.8278783356800647
 French: P(i) =-1.3081619549226269 ==> log prob of sentence so far: -1.7852832096422893
@@ -22,15 +24,16 @@ Italian: P(k) =-3.2088458109011486 ==> log prob of sentence so far: -7.830616168
 
 According to the unigram model, the sentence is in English
 ---------------- 
+BIGRAM MODEL:
 
 Bigram: im
-English: P(m|i) =-1.3492724662377018 ==> log prob of sentence so far: -1.8263937209573642
-French: P(m|i) =-1.5878197053712042 ==> log prob of sentence so far: -2.064940960090867
-Italian: P(m|i) =-1.3004534189115384 ==> log prob of sentence so far: -1.7775746736312008
+English: P(m|i) =-1.3492689756997125 ==> log prob of sentence so far: -1.8263902304193749
+French: P(m|i) =-1.587814957452674 ==> log prob of sentence so far: -2.0649362121723365
+Italian: P(m|i) =-1.3004515147500755 ==> log prob of sentence so far: -1.7775727694697379
 
 Bigram: ok
-English: P(k|o) =-1.8287384256360522 ==> log prob of sentence so far: -3.6551321465934166
-French: P(k|o) =-3.393756688638674 ==> log prob of sentence so far: -5.45869764872954
-Italian: P(k|o) =-4.0772332028686735 ==> log prob of sentence so far: -5.8548078764998746
+English: P(k|o) =-1.8287348564395063 ==> log prob of sentence so far: -3.655125086858881
+French: P(k|o) =-3.39375064034808 ==> log prob of sentence so far: -5.458686852520417
+Italian: P(k|o) =-4.07723106439821 ==> log prob of sentence so far: -5.854803833867948
 
 According to the unigram model, the sentence is in English
